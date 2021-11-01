@@ -1,0 +1,19 @@
+---
+- name: Create app container
+  docker_container:
+    name: "{{application_name}}"
+    image: "namelivia/{{application_name}}:latest"
+    pull: true
+    memory: "10MB"
+    log_driver: "awslogs"
+    restart_policy: "always"
+    log_options:
+        awslogs-region: "{{cloudwatch_region}}"
+        awslogs-group: "{{cloudwatch_log_group}}"
+        awslogs-stream: "{{application_name}}"
+    exposed_ports:
+      - "80"
+    env:
+      VIRTUAL_HOST: "{{ domain_name }}"
+      LETSENCRYPT_HOST: "{{ domain_name }}"
+      VIRTUAL_PORT: "80"
