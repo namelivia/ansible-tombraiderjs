@@ -11,7 +11,7 @@ collections:
   - community.docker
 
 roles:
-  - src: https://github.com/namelivia/namelivia.tombraiderjs
+  - src: https://github.com/namelivia/ansible-tombraiderjs
 ```
 
 ## Required variables

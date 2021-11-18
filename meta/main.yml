@@ -1,5 +1,5 @@
 galaxy_info:
-  role_name: namelivia.tombraiderjs
+  role_name: tombraiderjs
   author: José Ignacio Amelivia Santiago <jignacio.amelivia@gmail.com>
   description: Ansible role I use to install and configure namelivia/tomb-raider-js-demo-site
   license: GPLv2
