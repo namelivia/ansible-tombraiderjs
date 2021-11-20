@@ -1,4 +1,4 @@
-# TombRaiderJS website Ansible role
+# TombRaiderJS website Ansible role [![Ansible Lint](https://github.com/namelivia/ansible-tombraiderjs/actions/workflows/ansible-lint.yml/badge.svg)](https://github.com/namelivia/ansible-tombraiderjs/actions/workflows/ansible-lint.yml)
 
 ## This is a WIP
 
