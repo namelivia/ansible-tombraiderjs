@@ -4,8 +4,7 @@
   assert:
     that:
       - application_name is defined
-      - cloudwatch_region is defined
-      - cloudwatch_log_group is defined
+      - loki_url is defined
       - domain_name is defined
 
 - name: Create app container
@@ -15,12 +14,11 @@
     pull: true
     cleanup: true
     memory: "10MB"
-    log_driver: "awslogs"
     restart_policy: "always"
+    log_driver: "loki"
     log_options:
-      awslogs-region: "{{ cloudwatch_region }}"
-      awslogs-group: "{{ cloudwatch_log_group }}"
-      awslogs-stream: "{{ application_name }}"
+      loki-url: "{{ loki_url }}"
+      loki-batch-size: "400"
     exposed_ports:
       - "80"
     env:
